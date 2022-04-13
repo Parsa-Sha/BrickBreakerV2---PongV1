@@ -2,6 +2,16 @@
 // Using modular programming and classes, I've made a simple brick breaker game
 // https://github.com/Parsa-Sha/BrickBreakerV1
 
+
+
+// To do list:
+// Create powerups:
+//   Spawn two more balls in the center
+//   Spawn two more balls where the ball is located
+//   Widen paddle width
+//   Gun & mega lazer
+
+
 ArrayList<Brick> myBricks;
 ArrayList<Ball> myBalls;
 Paddle myPaddle;
@@ -16,7 +26,7 @@ int brickRows = 6;
 int brickColumns = 16;
 
 int bricksAlive = brickRows * brickColumns; // Total number of bricks, and bricks that have more than 1 hp
-int totalBricks = brickRows * brickColumns;
+int totalBricks = bricksAlive;
 
 float bx, by, bvx, bvy, bd; // Global ball variables
 
