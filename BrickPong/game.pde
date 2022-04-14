@@ -6,7 +6,7 @@ void game() {
       Brick b = myBricks.get(i*brickRows + j); // Getting brick
       b.x = 64 * i + 32; // Positioning based on I and J
       b.y = 32 * j + 32;
-      b.currentBrickImage = brickImages[brickRows-j-1]; // Purple for top row, red for bottom.
+      b.currentBrickImage = brickRows-j-1; // Purple for top row, red for bottom.
       b.show();
       b.act();
     }

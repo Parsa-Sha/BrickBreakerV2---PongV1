@@ -9,6 +9,7 @@
 //   Spawn two more balls in the center
 //   Spawn two more balls where the ball is located
 //   Widen paddle width
+//   Shorten paddle width
 //   Gun & mega lazer
 
 
@@ -31,7 +32,9 @@ int totalBricks = bricksAlive;
 float bx, by, bvx, bvy, bd; // Global ball variables
 
 PImage[] brickImages = new PImage[6];
-PImage currentBrick, paddleImage, ballImage, bgImage;
+PImage[] powerupImages = new PImage[4];
+PImage paddleImage, ballImage, bgImage;
+int currentBrick, currentPowerup;
 
 void setup() {
   size(1024, 576);

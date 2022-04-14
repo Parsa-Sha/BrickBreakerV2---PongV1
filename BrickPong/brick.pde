@@ -3,19 +3,18 @@ class Brick {
   //1. Instance Variables
   float x, y;
   int hp, brickX, brickY;
-  PImage currentBrickImage;
+  int currentBrickImage;
 
   //2. Constructor
   Brick() {
     x = 0;
     y = 0;
     hp = 1;
-    currentBrickImage = currentBrick;
   }
 
   //3. Behaviour Functions
   void show() {
-    if (hp > 0) image(currentBrickImage, x, y);
+    if (hp > 0) image(brickImages[currentBrickImage], x, y);
   }
 
   void act() { // Old brick bounding calculation
