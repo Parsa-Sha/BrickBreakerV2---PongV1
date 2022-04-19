@@ -16,6 +16,9 @@
 
 ArrayList<Brick> myBricks;
 ArrayList<Ball> myBalls;
+ArrayList<Powerup> myPowerups;
+Ball objectBall = null;
+Ball objectBall2 = null;
 Paddle myPaddle;
 
 final int INTRO = 1; // Modular framework, using enums
@@ -54,6 +57,7 @@ void setup() {
   
   myBricks = new ArrayList<Brick>();
   myBalls = new ArrayList<Ball>();
+  myPowerups = new ArrayList<Powerup>();
   myPaddle = new Paddle();
   
   for(int i = 0; i < totalBricks; i++) myBricks.add( new Brick() ); // Creating bricks and ball 

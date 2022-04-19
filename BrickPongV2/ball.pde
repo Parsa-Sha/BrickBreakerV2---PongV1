@@ -1,5 +1,6 @@
 class Ball {
   float bx, by, bvx, bvy, bd;
+  int lives;
   
   Ball() {
     bx = width/2;
@@ -38,8 +39,14 @@ class Ball {
       by = height/2;
       bvx = 0;
       bvy = 3;
-      mode = GAMEOVER;
+      lives--;
     }
+    
+    /*
+    
+    if (lives == 0) myBalls
+    
+    */
     
     if(by + bd/2 > myPaddle.y - myPaddle.paddleHeight && by + bd/2 < myPaddle.y && myPaddle.x + myPaddle.paddleWidth >= bx && myPaddle.x - myPaddle.paddleWidth <= bx) { // Paddle bounding
       bvy = ( (by) - (myPaddle.y) ) * 0.25;
