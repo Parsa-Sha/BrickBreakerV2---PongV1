@@ -6,16 +6,14 @@ class Ball {
   Ball() {
     bx = width/2;
     by = height/2;
-    bv.x = random(-1, 1);
-    bv.y = random(2, 4);
+    bv = new PVector (random(-1, 1), random(2, 4));
     bd = 16;
   }
   
   Ball(float ballX, float ballY, PVector ballV) {
     bx = ballX;
     by = ballY;
-    bv.x = ballV.x;
-    bv.y = ballV.y;
+    bv = new PVector (random(-1, 1), random(2, 4));
     bd = 16;
   }
   

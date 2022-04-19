@@ -68,6 +68,8 @@ class Powerup {
         println("ERROR: UNIDENTIFIED POWERUP TYPE: " + powerupType);
       }
 
+      println("powerupGained");
+
       lives--;
     }
   }
