@@ -21,6 +21,7 @@ void game() {
     objectPowerup = myPowerups.get(j);
     objectPowerup.show();
     objectPowerup.act();
+    if (objectPowerup.lives == 0) myPowerups.remove(j);
   }
   
   Ball mainBall = myBalls.get(0);
