@@ -14,7 +14,7 @@ class Ball {
   Ball(float ballX, float ballY, PVector ballV) {
     bx = ballX;
     by = ballY;
-    bv = new PVector (random(-1, 1), random(2, 4));
+    bv = ballV.copy();
     bd = 16;
     lives = 1;
   }

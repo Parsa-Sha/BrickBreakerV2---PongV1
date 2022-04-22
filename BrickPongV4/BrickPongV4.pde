@@ -75,7 +75,6 @@ void draw() { // Switching mode based on mode variable
     intro();
     break;
     case GAME:
-    bricksAlive = totalBricks;
     game();
     break;
     case GAMEOVER:

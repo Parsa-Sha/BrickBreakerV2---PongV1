@@ -40,41 +40,37 @@ class Powerup {
 
     if (dist(x, y, myPaddle.x, myPaddle.y) < size/2 + (myPaddle.paddleWidth + myPaddle.paddleHeight)/4) {
 
-    /*      
-
       switch(powerupType) {
       case 0: // Three Split code
-        for (int i = 0; i < myBalls.size(); i++) { // Loop through all the balls
+        for (int i = myBalls.size()-1; i > -1; i--) { // Loop through all the balls
           objectBall2 = myBalls.get(i);
           
           objectBall2.bv.rotate(-0.2);
           myBalls.add(new Ball(objectBall2.bx, objectBall2.by, objectBall2.bv));
-
+          
           objectBall2.bv.rotate(0.4);
           myBalls.add(new Ball(objectBall2.bx, objectBall2.by, objectBall2.bv));
 
           objectBall2.bv.rotate(-0.2);
         }
-        break;
+        break; // NOW WORKS :D
 
       case 1: // Multiball code
         myBalls.add(new Ball());
         myBalls.add(new Ball());
-        break;
+        break; // THIS WORKS :D
 
       case 2: // Paddle Widen code
-        myPaddle.paddleWidth *= 4/3;
-        break;
+        myPaddle.paddleWidth *= 4.0/3;
+        break; // Paddle Widen works
 
       case 3: // Paddle Shorten code
-        myPaddle.paddleWidth *= 3/4;
-        break;
+        myPaddle.paddleWidth *= 3.0/4;
+        break; // Paddle Shorten works
 
       default: // If all else fails
         println("ERROR: UNIDENTIFIED POWERUP TYPE: " + powerupType);
       }
-
-      */
 
       lives--;
     }

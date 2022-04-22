@@ -13,6 +13,6 @@ class Paddle {
   }
   
   void show() {
-    image(paddleImage, x, y);
+    image(paddleImage, x, y, paddleWidth, paddleHeight);
   }
 }

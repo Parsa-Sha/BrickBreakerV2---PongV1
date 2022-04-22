@@ -6,6 +6,7 @@ void gamedone() {
   }
   
   for (int j = 0; j < myPowerups.size(); j++) myPowerups.remove(j);
+  myPaddle.paddleWidth = 80;
   
   fill(81, 211, 210);
   textSize(100);
