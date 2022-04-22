@@ -27,8 +27,7 @@ class Powerup {
   void show() {
     fill(255);
     strokeWeight(1);
-    ellipse(x, y, size, size);
-    // image(powerupImages[powerupType], x, y, size, size);
+    image(powerupImages[powerupType], x, y, size, size);
   }
 
   void act() {
@@ -39,7 +38,7 @@ class Powerup {
 
     if (y > height - size) lives--;
 
-    if (dist(x, y, myPaddle.x, myPaddle.y) < size/2) {
+    if (dist(x, y, myPaddle.x, myPaddle.y) < size/2 + (myPaddle.paddleWidth + myPaddle.paddleHeight)/4) {
 
     /*      
 

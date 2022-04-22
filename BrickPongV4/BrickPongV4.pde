@@ -35,12 +35,12 @@ int brickColumns = 16;
 int bricksAlive = brickRows * brickColumns; // Total number of bricks, and bricks that have more than 1 hp
 int totalBricks = bricksAlive;
 
- // Global ball variables
-
 PImage[] brickImages = new PImage[6];
 PImage[] powerupImages = new PImage[4];
 PImage paddleImage, ballImage, bgImage;
 int currentBrick;
+
+boolean newGame = true;
 
 void setup() {
   size(1024, 576);
@@ -52,6 +52,10 @@ void setup() {
   brickImages[3] = loadImage("images\\BrickGreen.png");
   brickImages[4] = loadImage("images\\BrickBlue.png");
   brickImages[5] = loadImage("images\\BrickPurple.png");
+  powerupImages[0] = loadImage("icons\\splitBall.png");
+  powerupImages[1] = loadImage("icons\\multiball.png");
+  powerupImages[2] = loadImage("icons\\paddleWiden.png");
+  powerupImages[3] = loadImage("icons\\paddleShorten.png");
   paddleImage = loadImage("images\\Paddle.png");
   ballImage = loadImage("images\\Ball2.png");
   bgImage = loadImage("images\\Bg.png");
@@ -63,7 +67,6 @@ void setup() {
   myPaddle = new Paddle();
   
   for(int i = 0; i < totalBricks; i++) myBricks.add( new Brick() ); // Creating bricks and ball 
-  myBalls.add(new Ball());
 }
 
 void draw() { // Switching mode based on mode variable

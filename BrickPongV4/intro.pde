@@ -19,4 +19,9 @@ void intro() {
   textSize(40);
   fill(buttonHover/10*255);
   text("PLAY!", width/2, height/1.3 + 10);
+  
+  if (newGame) {
+    newGame = false;
+    myBalls.add(new Ball());
+  }
 }
