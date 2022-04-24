@@ -22,6 +22,9 @@ void intro() {
   
   if (newGame) {
     newGame = false;
+    for (int j = 0; j < myBalls.size(); j++) myBalls.remove(j);
+    for (int k = 0; k < myPowerups.size(); k++) myPowerups.remove(k);
     myBalls.add(new Ball());
+    bricksAlive = totalBricks;
   }
 }

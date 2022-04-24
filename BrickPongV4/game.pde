@@ -27,11 +27,7 @@ void game() {
     if (objectBall3.lives == 0) myBalls.remove(k);
   }
 
-  if (bricksAlive == 0) { // If game has won
-    bricksAlive = totalBricks;
-    mode = GAMEDONE;
-  }
-
+  if (bricksAlive == 0) mode = GAMEDONE;
   if (myBalls.size() == 0) mode = GAMEOVER;
 
   myPaddle.show();

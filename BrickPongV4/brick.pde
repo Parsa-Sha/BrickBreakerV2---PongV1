@@ -34,7 +34,6 @@ class Brick {
         if (random(2) < 1) myPowerups.add(new Powerup(x, y, floor(random(4)))); // Spawn powerup
         hp--;
         bricksAlive--;
-        println(bricksAlive);
       }
     }
   }
